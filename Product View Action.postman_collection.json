@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "340b34e0-e1ad-4e01-82ca-a3410ce4ee02",
+		"name": "Product View Action",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33643733",
+		"_collection_link": "https://www.postman.com/spacecraft-specialist-7984735/workspace/shopperstack/collection/33643733-340b34e0-e1ad-4e01-82ca-a3410ce4ee02?action=share&source=collection_link&creator=33643733"
+	},
+	"item": [
+		{
+			"name": "Returns all the products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWTtoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/products?zoneId=ALPHA",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "zoneId",
+							"value": "ALPHA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Returns all the default products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/products/alpha?zoneId=ALPHA",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"products",
+						"alpha"
+					],
+					"query": [
+						{
+							"key": "zoneId",
+							"value": "ALPHA"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
